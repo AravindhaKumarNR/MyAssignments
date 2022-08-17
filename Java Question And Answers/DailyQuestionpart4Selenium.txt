@@ -1,0 +1,67 @@
+1) What is Selenium? What are the different Selenium components? Explain about Selenium Webdriver.
+
+	Selenium is an open source tool that automates webbrowsers using a single interface which lets us
+	to write our test scripts in different programming languages like Ruby, Java, NodeJS, PHP, Perl,
+	Python, and C#.
+	
+	Different Selenium components are:
+		-->Selenium WebDriver
+		-->Selenium IDE
+		-->Selenium Grid
+		-->Selenium RC
+	
+	Selenium WebDriver-->	 Selenium WebDriver is a web framework that permits you to execute cross-browser tests.
+	This tool is used for automating web-based application testing to verify that it performs expectedly. 
+
+2) How does Selenium communicate with the Web browsers?
+	Selenium communicates browser with the help of browser drivers which Selenium API requests the browser with the 
+	help of browser driver to hit the request and displays the response which Selenium follows W3C compliance where
+	earlier it was performed by JSON wire protocol.
+		
+3.What are the locators available  to find an element using Selenium?
+	Different locators available in Selenium are:
+		-->id 
+		-->name
+		-->className
+		-->tagName 
+		-->linkText 
+		-->partalLinkText
+		-->CSS
+		-->xPath
+	
+4. Why ID is preferable than X-Path?
+	ID is preferable more than xPath because  By.ID() is the faster technique because at its root, the call goes down to document.
+	getElementById(), which is optimized by most browsers. But, finding elements using XPath is better for locating elements having
+	complex selectors, and is no doubt the most flexible selection strategy
+
+5.How to select value in dropdown?
+	Import the “Select” package.
+	Declare the drop-down element as an instance of the Select class.
+	Then selecting the value by different methods present inside the select class.
+	
+6) What is the difference between Absolute Path and Relative Path?
+	Absolute xPath--> is a xpath written from the root node of a DOM which can change if there is any change in code.
+	One drawback with the absolute xpath is that if there is any change in attributes beginning from the root to the element, 
+	our absolute xpath will become invalid. 
+	
+	Relative xPath-->starts by referring to the element that we want to identify and not from the root node.
+	A relative xpath starts with the // symbol. It is mainly used for automation since even if an element is
+	removed or added in the DOM, the relative xpath is not impacted.
+	
+7) How to verify if the given check box is checked or not (it is not taught but you can explore) Try here: http://leafground.com/pages/checkbox.html
+	boolean enabled = driver.findElement(By.checkBox locator(" ")).isEnabled();
+	System.out.println("The Checkbox is disabled:"+enabled);
+
+8)Difference between System.setProperty and WebDriverManager
+	System.setProperty is by setting the path of our web browser driver for selenium to call the browser through the path location.
+
+	Wheras, WebDriverManager is developed by a Spanish professor named Boni Garcia who developed WebDriverManager which this block of code
+	helps us to download the browser drivers without installing browser driver for each browser.
+
+9) Write the syntax for preceding and following x-paths.
+	//tagName[@attribute='attribute vale']/parent::tagName of Parent
+
+10) How to get an attribute value using Selenium WebDriver?
+	String attr=driver.findElement(By.locator()).getAttribute(); //which returns a string value
+	//To print the attribute 
+	System.out.println("Attribute:"+attr);

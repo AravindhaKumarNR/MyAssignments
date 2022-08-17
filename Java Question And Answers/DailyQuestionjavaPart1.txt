@@ -1,0 +1,115 @@
+
+       Answer All the Question
+1.Explain about the main method in java?
+	The main() is the starting point for JVM to start execution of a Java program.
+	Without the main() method, JVM will not execute the program. 
+	The syntax of the main() method is:
+	public static void main(String args[]){
+		//block of code
+	}
+	where,
+	public: is an access specifier we should use public before the main() method so that
+	JVM can identify the execution pointof the program.
+
+	static: we must make a method static by using static keyword. we should call the main
+	method without creating an object.Static method invokes without creating the objects,
+	so we do not need any object to call the main method.
+
+	void: in java every method should have a return type void keyword helps the compiler 
+	that main() method does not return any value.
+	
+	main(): it is a default signature predefined by JVM. It is called by JVM to execute 
+	a program line by line and end the execution after completion of this method.
+
+	(String args[]):[]: The main() method also accepts some data from the user.
+	It accepts a group of strings, which is called a string array.
+	It is used to hold the command line arguments in the form of string values.
+
+	
+
+2.What are the different  Control flow Statements available in java?
+	Java provides three types of control flow statements.
+
+	Decision Making statements
+		if statements
+		switch statement
+	Loop statements
+		do while loop
+		while loop
+		for loop
+		for-each loop
+	Jump statements
+		break statement
+		continue statement
+
+	
+3.What is the Difference betweeen break and continue statements?
+	break:is used to break the current flow of the program and transfer the control
+	to the next statement outside a loop or switch statement. However, it breaks only 
+	the inner loop in the case of the nested loop.
+	
+	continue:Unlike break statement, the continue statement doesn't break the loop,
+	whereas, it skips the specific part of the loop and jumps to the next iteration of the loop immediately.
+	The break statement cannot be used independently in the Java program, i.e., it can only be written inside 
+	the loop or switch statement.
+
+4.What is an Array? How will you declare an array in java?
+	An array is a collection of similar data elements stored at contiguous memory locations.
+	Array can be declared using:
+		-->without assigning values with new keyword: datatype [] arrayName = new datatype [ size ]  
+		-->after declaration of the array: 
+			first declaring the datatype [] variableName
+			variable name=new datatype[]{-----};
+		--> Initializing and assigning values together: datatype[]={ ------ };
+		
+5.When will you get ArrayIndexOutOfBoundsException?
+	The ArrayIndexOutOfBoundsException occurs whenever we are trying to access any item of an array at an index 
+	which is not present in the array. In other words, the index may be negative or exceed the size of an array.
+	
+	The ArrayIndexOutOfBoundsException is a subclass of IndexOutOfBoundsException, and it implements the 
+	Serializable interface
+	
+6.Define the Syntax to create an object for a class.
+	Syntax:
+		Constructor variableName=new Constructor();
+	
+What are the naming conventions to be followed while creating a class, 
+method and a variable.Explain with examples
+	Java naming convention is a rule to follow as you decide what to name your identifiers such as class,
+	package, variable, constant, method, etc.
+	
+	class--> should always start with the uppercaseletter. eg:Employee
+	interface-->should always start with the uppercaseletter.eg:Printable
+	method-->should always start with the lowercaseletter.eg: draw()
+	variable-->should always start with the lowercaseletter. eg:int id;
+	
+7.What is Variable?How will you declare a variables in java?
+	Variables are containers for storing data values.
+		String - stores text, such as "Hello". String values are surrounded by double quotes
+		int - stores integers (whole numbers), without decimals, such as 123 or -123
+		float - stores floating point numbers, with decimals, such as 19.99 or -19.99
+		char - stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes
+		boolean - stores values with two states: true or false
+
+8.What is String in java? Is it a Data Type?
+	In Java, string is basically an object that represents sequence of char values. 
+	An array of characters works same as Java string.
+	
+	Yes, String is a non primitive data type.	
+
+9.What are the different ways to create the String Object in java?
+	By string literal : Java String literal is created by using double quotes.
+		For Example: String s=“Welcome”;  
+	By new keyword : Java String is created by using a keyword “new”.
+		For example: String s=new String(“Welcome”);  
+	It creates two objects (in String pool and in heap) and one reference variable where the variable ‘s’ 
+	will refer to the object in the heap.
+
+
+10.What is the Difference between .Equals and ==? 
+	The major difference between the == operator and .equals() method is that one is an operator, and the other is the method.
+	Both these == operators and equals() are used to compare objects to mark equality. 
+
+	== is an operator that compares the memory or reference location of an object in the heap.
+	.equal() is a method that compares the actual content of the object.
+
